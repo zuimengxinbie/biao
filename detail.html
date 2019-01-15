@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>太好乐数据分析</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/detail.css">
+
+    <script src="js/rem.js"></script>
+    <script src="js/echarts.min.js"></script>
+    <script src="js/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+<header>
+    <img src='image/img_slgan@2x.png' class='logo'>
+</header>
+
+<div id="main">
+    <div class="m-head">
+        <div class="visit">
+            <span class="h-title">访问分析</span>
+        </div>
+        <div class="staus">
+            <span class="h-title">数据统计</span>
+        </div>
+        <div class="user">
+            <span class="h-title">用户画像</span>
+            <span class="h-line"></span>
+        </div>
+    </div>
+    <div class="m-cation">
+        <div class="m-wrap">
+            <div class="m-item hot">年龄区间</div>
+            <div class="m-item">商品占比</div>
+            <div class="m-item">销量金额</div>
+            <div class="m-item">年纪分布</div>
+            <div class="m-item">性别分布</div>
+            <div class="m-item">学历分布</div>
+        </div>
+    </div>
+    <div class="m-date">
+        <div class="d-time">
+            <div class="d-range">
+                日期范围
+                <span class="hot">近7日</span>
+                <span>近30天</span>
+            </div>
+            <div class="d-update">
+                数据更新至 <span>2019-01-03</span>
+            </div>
+        </div>
+        <div class="d-section">
+            日期选择器
+        </div>
+    </div>
+</div>
+<div id="echarts">
+    <div class="more">
+        <div class="e-title">
+            <span>活跃用户</span>
+            <span></span>
+        </div>
+        <div id="many" style="width: 100%;height: 180px;"></div>
+        <div id="rail" style="width: 100%;height: 180px;"></div>
+    </div>
+</div>
+<footer>
+    <div class="analy">
+        <a href="analy.html">
+            <div class="g-img"></div>
+            <div class="g-title">数据概况</div>
+        </a>
+    </div>
+    <div class="detail">
+        <a href="detail.html">
+            <div class="g-img"></div>
+            <div class="g-title">数据详情</div>
+        </a>
+    </div>
+    <div class="home">
+        <a href="home.html">
+            <div class="g-img"></div>
+            <div class="g-title">我的账号</div>
+        </a>
+    </div>
+</footer>
+</body>
+</html>
+<script type="text/javascript">
+    var many = document.getElementById('many');
+    var rail = document.getElementById('rail');
+    var chars = [];
+
+    var mychars = echarts.init(many);
+    option = {
+        tooltip: {
+            trigger: 'item',
+            formatter: "{a} <br/>{b}: {c} ({d}%)"
+        },
+        legend: {
+            orient: 'vertical',
+            x: '80%',
+            y: '50%',
+            data: ['男士', '女士', '未知']
+        },
+        series: [
+            {
+                name: '访问来源',
+                type: 'pie',
+                center:["36%","50%"],
+                radius: ['50%', '80%'],
+                avoidLabelOverlap: false,
+                label: {
+                    normal: {
+                        show: false,
+                        position: 'center'
+                    },
+                    emphasis: {
+                        show: true,
+                        textStyle: {
+                            fontSize: '24',
+                            fontWeight: 'bold'
+                        }
+                    }
+                },
+                labelLine: {
+                    normal: {
+                        show: false
+                    }
+                },
+                data: [
+                    {value: 444, name: '男士'},
+                    {value: 500, name: '女士'},
+                    {value: 66, name: '未知'}
+                ],
+                itemStyle: {
+                    emphasis: {
+                        shadowBlur: 10,
+                        shadowOffsetX: 0,
+                        shadowColor: 'rgba(0, 0, 0, 0.5)'
+                    },
+                    normal: {
+                        color: function (params) {
+                            //自定义颜色
+                            var colorList = [
+                                '#009DFF', '#13D7EF', '#2CD000',
+                            ];
+                            return colorList[params.dataIndex]
+                        }
+                    }
+                }
+            }
+        ]
+    };
+    mychars.setOption(option);
+    chars.push(mychars);
+
+    mychars = echarts.init(rail);
+    option = {
+        tooltip: {
+            trigger: 'axis',
+            axisPointer: {
+                type: 'shadow'
+            }
+        },
+        legend: {
+        },
+        grid: {
+            top:'2%',
+            left: '3%',
+            right: '10%',
+            bottom: '3%',
+            containLabel: true
+        },
+        xAxis: {
+            show: false,
+            type: 'value',
+            boundaryGap: [0, 0.01]
+        },
+        yAxis: {
+            type: 'category',
+            data: ['未知', '70岁以上', '60-69岁', '50-59岁', '40-49岁','30-39岁','29-29岁'],
+            axisTick: {
+                show: false,
+            },
+            axisLine: {show: false},
+            axisLabel: {
+                show: true,
+                textStyle: {
+                    fontSize: 8
+                }
+            },
+
+        },
+        series: [
+            {
+                name: '',
+                type: 'bar',
+                data: [99,119,129,139,149,159,169],
+                barWidth : 10,//柱图宽度
+                itemStyle: {
+                    normal: {
+                        color: '#31A4F7',
+                        label: {
+                            show: true,
+                            position: 'right',
+                            textStyle: {
+                                color: 'black',
+                                fontSize: 10
+                            }
+                        }
+                    }
+                }
+            }
+        ]
+    };
+    mychars.setOption(option);
+    window.onresize = function () {
+        for (var i = 0; i < chars.length; i++) {
+            charts[i].resize();
+        }
+    }
+
+</script>
