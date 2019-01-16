@@ -7,11 +7,18 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>太好乐数据分析</title>
     <link rel="stylesheet" href="css/common.css">
-    <link rel="stylesheet" href="css/detail.css">
+    <link rel="stylesheet" href="css/detail.css?v=123">
+
+    <!--创建表格-->
+    <link rel="stylesheet" href="css/element.css">
+    <script src="js/vue.min.js"></script>
+    <script src="js/element.min.js"></script>
+    <!--创建表格-->
 
     <script src="js/rem.js"></script>
     <script src="js/echarts.min.js"></script>
     <script src="js/jquery-3.3.1.min.js"></script>
+
 </head>
 <body>
 <header>
@@ -101,6 +108,31 @@
             <span class="trig"></span>
         </div>
         <div id="browse" style="width: 100%; height: 220px;"></div>
+    </div>
+
+    <div class="more">
+        <div class="e-title">
+            <span class="e-user">近期开团浏览</span>
+            <span class="trig"></span>
+        </div>
+        <div id="graph">
+            <template>
+                <el-table :data="tableData3" style="width: 100%" height="240">
+                    <el-table-column fixed prop="date" label="序号" width="150">
+                    </el-table-column>
+                    <el-table-column prop="name" label="团长ID" width="120">
+                    </el-table-column>
+                    <el-table-column prop="province" label="订单数" width="120">
+                    </el-table-column>
+                    <el-table-column prop="city" label="各团转化率" width="120">
+                    </el-table-column>
+                    <el-table-column prop="address" label="销售收入" width="300">
+                    </el-table-column>
+                    <el-table-column prop="zip" label="退款单数" width="120">
+                    </el-table-column>
+                </el-table>
+            </template>
+        </div>
     </div>
 </div>
 <footer>
@@ -516,5 +548,63 @@
             charts[i].resize();
         }
     }
-
+</script>
+<script>
+    new Vue({
+        el: '#graph',
+        data: function() {
+            return {
+                tableData3: [{
+                    date: '2016-05-03',
+                    name: '王小虎',
+                    province: '上海',
+                    city: '普陀区',
+                    address: '上海市普陀区金沙江路 1518 弄',
+                    zip: 200333
+                }, {
+                    date: '2016-05-02',
+                    name: '王小虎',
+                    province: '上海',
+                    city: '普陀区',
+                    address: '上海市普陀区金沙江路 1518 弄',
+                    zip: 200333
+                }, {
+                    date: '2016-05-04',
+                    name: '王小虎',
+                    province: '上海',
+                    city: '普陀区',
+                    address: '上海市普陀区金沙江路 1518 弄',
+                    zip: 200333
+                }, {
+                    date: '2016-05-01',
+                    name: '王小虎',
+                    province: '上海',
+                    city: '普陀区',
+                    address: '上海市普陀区金沙江路 1518 弄',
+                    zip: 200333
+                }, {
+                    date: '2016-05-08',
+                    name: '王小虎',
+                    province: '上海',
+                    city: '普陀区',
+                    address: '上海市普陀区金沙江路 1518 弄',
+                    zip: 200333
+                }, {
+                    date: '2016-05-06',
+                    name: '王小虎',
+                    province: '上海',
+                    city: '普陀区',
+                    address: '上海市普陀区金沙江路 1518 弄',
+                    zip: 200333
+                }, {
+                    date: '2016-05-07',
+                    name: '王小虎',
+                    province: '上海',
+                    city: '普陀区',
+                    address: '上海市普陀区金沙江路 1518 弄',
+                    zip: 200333
+                }]
+            }
+        }
+    })
 </script>
