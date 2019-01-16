@@ -35,22 +35,44 @@ footer .analy a, .detail a, .home a{display: flex; flex-direction: column; align
 .d-update{font-size:0.22rem; font-family:PingFang-SC-Regular; font-weight:400; color:rgba(37,37,37,1);}
 .d-section{font-size: 0.28rem; text-align: center;}
 
+
+#echarts{
+    margin-bottom: 1.10rem;
+}
 .more{
     width: 100%;
-    height: 20rem;
+    height: auto;
     overflow: hidden;
     border-top: 0.12rem solid #F5F5F5;
 }
 .e-title{
+    display: flex;
+    align-items: center;
     margin-top:0.22rem;
     font-size:0.30rem;
-    font-weight:500;
+    font-weight:600;
     color:rgba(38,48,73,1);
 }
-.e-title span{
+.even{
+    margin-top: 0;
+    margin-bottom: 0.30rem;
+}
+.e-title .e-user{
     margin-left: 0.35rem;
 }
-
+.trig{
+    display: block;
+    width: 0.18rem;
+    height: 0.10rem;
+    background: url("../image/jiao.png") center no-repeat;
+    background-size: 100%;
+}
+.e-more{
+    font-size:0.20rem;
+    font-family:PingFang-SC-Regular;
+    font-weight:400;
+    color:rgba(153,153,153,1);
+}
 
 
 
