@@ -20,6 +20,22 @@
     <script src="js/jquery-3.3.1.min.js"></script>
 
 </head>
+<script type="text/javascript">
+    function resize(){
+        var docEl = document.documentElement;
+        var clientWidth = window.innerWidth;
+        if(clientWidth <= 375){
+            docEl.style.fontSize = '50px';
+        }else if(clientWidth >= 750){
+            docEl.style.fontSize = '100px';
+        }else{
+            docEl.style.fontSize = 100 * (clientWidth / 750) + 'px';
+        }
+    }
+    //解决加载时放大后再缩小
+    resize();
+</script>
+
 <body>
 <header>
     <img src='image/img_slgan@2x.png' class='logo'>
@@ -83,7 +99,7 @@
             <span class="e-user">省份用户</span>
             <span class="trig"></span>
         </div>
-        <div id="province" style="width: 100%;height: 160px;"></div>
+        <div id="province" style="width: 100%;height: 220px;"></div>
         <div class="e-title even">
             <span class="e-user e-more">更多</span>
             <span class="trig"></span>
@@ -115,20 +131,20 @@
             <span class="e-user">近期开团浏览</span>
             <span class="trig"></span>
         </div>
-        <div id="graph">
+        <div id="graph" v-cloak>
             <template>
-                <el-table :data="tableData3" style="width: 100%" height="240">
-                    <el-table-column fixed prop="date" label="序号" width="150">
+                <el-table :data="tableData" border stripe style="width: 100%" height="240">
+                    <el-table-column fixed prop="serial" label="序号" width="50">
                     </el-table-column>
-                    <el-table-column prop="name" label="团长ID" width="120">
+                    <el-table-column prop="address" label="团长ID" width="150">
                     </el-table-column>
-                    <el-table-column prop="province" label="订单数" width="120">
+                    <el-table-column prop="nums" label="订单数" width="80">
                     </el-table-column>
-                    <el-table-column prop="city" label="各团转化率" width="120">
+                    <el-table-column prop="change" label="各团转化率" width="90">
                     </el-table-column>
-                    <el-table-column prop="address" label="销售收入" width="300">
+                    <el-table-column prop="income" label="销售收入" width="80">
                     </el-table-column>
-                    <el-table-column prop="zip" label="退款单数" width="120">
+                    <el-table-column prop="refund" label="退款单数" width="80">
                     </el-table-column>
                 </el-table>
             </template>
@@ -157,7 +173,12 @@
 </footer>
 </body>
 </html>
+
+
+<!--图表-->
 <script type="text/javascript">
+
+
     var many = document.getElementById('many');
     var rail = document.getElementById('rail');
     var province = document.getElementById('province');
@@ -315,7 +336,7 @@
         },
         yAxis: {
             type: 'category',
-            data: ['河南省', '天津省', '浙江省', '山东省', '陕西省', '湖南省', '山西省'],
+            data: ['河南省', '天津省', '浙江省', '山东省', '陕西省', '湖南省', '山西省', '陕西省', '湖南省', '山西省'],
             axisTick: {
                 show: false,
             },
@@ -331,7 +352,7 @@
             {
                 name: '',
                 type: 'bar',
-                data: [100, 120, 130, 140, 150, 160, 190],
+                data: [100, 120, 130, 140, 150, 160, 190, 150, 160, 190],
                 barWidth: 10,//柱图宽度
                 itemStyle: {
                     normal: {
@@ -444,10 +465,10 @@
         xAxis: [
             {
                 name: '    (日期)',
-                nameLocation:'end',
-                nameTextStyle:{
-                    color:'#252525',
-                    fontSize:10
+                nameLocation: 'end',
+                nameTextStyle: {
+                    color: '#252525',
+                    fontSize: 10
                 },
                 type: 'category',
                 boundaryGap: false,
@@ -471,9 +492,9 @@
         yAxis: [
             {
                 name: '(万人/单位)',
-                nameTextStyle:{
-                  color:'#252525',
-                    fontSize:10
+                nameTextStyle: {
+                    color: '#252525',
+                    fontSize: 10
                 },
                 splitLine: {
                     show: false
@@ -549,60 +570,61 @@
         }
     }
 </script>
+<!--表格 -->
 <script>
     new Vue({
         el: '#graph',
-        data: function() {
+        data: function () {
             return {
-                tableData3: [{
-                    date: '2016-05-03',
-                    name: '王小虎',
-                    province: '上海',
-                    city: '普陀区',
-                    address: '上海市普陀区金沙江路 1518 弄',
-                    zip: 200333
+                tableData: [{
+                    serial: '1',
+                    address: '万里科技大厦610',
+                    nums: '32321',
+                    change: '61%',
+                    income: '99999',
+                    refund: 31
                 }, {
-                    date: '2016-05-02',
-                    name: '王小虎',
-                    province: '上海',
-                    city: '普陀区',
-                    address: '上海市普陀区金沙江路 1518 弄',
-                    zip: 200333
+                    serial: '2',
+                    address: '万立科技609',
+                    nums: '32321',
+                    change: '61%',
+                    income: '99999',
+                    refund: 31
                 }, {
-                    date: '2016-05-04',
-                    name: '王小虎',
-                    province: '上海',
-                    city: '普陀区',
-                    address: '上海市普陀区金沙江路 1518 弄',
-                    zip: 200333
+                    serial: '3',
+                    address: '小店区海棠家园',
+                    nums: '32321',
+                    change: '61%',
+                    income: '99999',
+                    refund: 31
                 }, {
-                    date: '2016-05-01',
-                    name: '王小虎',
-                    province: '上海',
-                    city: '普陀区',
-                    address: '上海市普陀区金沙江路 1518 弄',
-                    zip: 200333
+                    serial: '4',
+                    address: '太原市小店区',
+                    nums: '32321',
+                    change: '61%',
+                    income: '99999',
+                    refund: 31
                 }, {
-                    date: '2016-05-08',
-                    name: '王小虎',
-                    province: '上海',
-                    city: '普陀区',
-                    address: '上海市普陀区金沙江路 1518 弄',
-                    zip: 200333
+                    serial: '5',
+                    address: '小店区煤海湾新区',
+                    nums: '32321',
+                    change: '61%',
+                    income: '99999',
+                    refund: 31
                 }, {
-                    date: '2016-05-06',
-                    name: '王小虎',
-                    province: '上海',
-                    city: '普陀区',
-                    address: '上海市普陀区金沙江路 1518 弄',
-                    zip: 200333
+                    serial: '6',
+                    address: '晋源街道北瓦窑村',
+                    nums: '32321',
+                    change: '61%',
+                    income: '99999',
+                    refund: 31
                 }, {
-                    date: '2016-05-07',
-                    name: '王小虎',
-                    province: '上海',
-                    city: '普陀区',
-                    address: '上海市普陀区金沙江路 1518 弄',
-                    zip: 200333
+                    serial: '7',
+                    address: '小店区北格镇南浦村',
+                    nums: '32321',
+                    change: '61%',
+                    income: '99999',
+                    refund: 31
                 }]
             }
         }
