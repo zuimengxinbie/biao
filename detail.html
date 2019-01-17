@@ -8,6 +8,7 @@
     <title>太好乐数据分析</title>
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/detail.css?v=123">
+    <link rel="stylesheet" href="css/ztime.css">
 
     <!--创建表格-->
     <link rel="stylesheet" href="css/element.css">
@@ -17,6 +18,7 @@
 
     <script src="js/rem.js"></script>
     <script src="js/echarts.min.js"></script>
+    <script src="js/ztime.min.js"></script>
     <script src="js/jquery-3.3.1.min.js"></script>
 
 </head>
@@ -35,7 +37,6 @@
     //解决加载时放大后再缩小
     resize();
 </script>
-
 <body>
 <header>
     <img src='image/img_slgan@2x.png' class='logo'>
@@ -76,7 +77,11 @@
             </div>
         </div>
         <div class="d-section">
-            日期选择器
+            <input type="text" readonly id="begin" placeholder="2019-01-01"/>
+            <span class="trig"></span>
+            <span class="writing">至</span>
+            <input type="text" readonly id="ender" placeholder="2019-01-02"/>
+            <span class="trig"></span>
         </div>
     </div>
 </div>
@@ -177,8 +182,6 @@
 
 <!--图表-->
 <script type="text/javascript">
-
-
     var many = document.getElementById('many');
     var rail = document.getElementById('rail');
     var province = document.getElementById('province');
@@ -629,4 +632,17 @@
             }
         }
     })
+</script>
+<!--时间选择-->
+<script>
+    var a=new zTime({
+        el:"begin",      //选择器，必传
+        type:-2,
+        startYear:2010,         //开始年份  //可不传，默认为2000年
+        endYear:2050,           //结束年份  //可不传，默认为2025年
+        format:"-"              //时间格式分隔符： 默认为以“-”分隔 如：2018-08-08
+    });
+    var b=new zTime({
+        el:"ender",             //选择器，必传
+    });
 </script>
