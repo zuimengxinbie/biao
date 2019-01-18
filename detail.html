@@ -8,17 +8,17 @@
     <title>太好乐数据分析</title>
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/detail.css?v=123">
-    <link rel="stylesheet" href="css/ztime.css">
 
     <!--创建表格-->
     <link rel="stylesheet" href="css/element.css">
     <script src="js/vue.min.js"></script>
     <script src="js/element.min.js"></script>
     <!--创建表格-->
-
+    <!--时间选择插件-->
+    <script src="js/datePicker.js"></script>
+    <!--选择插件-->
     <script src="js/rem.js"></script>
     <script src="js/echarts.min.js"></script>
-    <script src="js/ztime.min.js"></script>
     <script src="js/jquery-3.3.1.min.js"></script>
 
 </head>
@@ -104,7 +104,7 @@
             <span class="e-user">省份用户</span>
             <span class="trig"></span>
         </div>
-        <div id="province" style="width: 100%;height: 220px;"></div>
+        <div id="province" style="width: 100%;height: 160px;"></div>
         <div class="e-title even">
             <span class="e-user e-more">更多</span>
             <span class="trig"></span>
@@ -339,7 +339,7 @@
         },
         yAxis: {
             type: 'category',
-            data: ['河南省', '天津省', '浙江省', '山东省', '陕西省', '湖南省', '山西省', '陕西省', '湖南省', '山西省'],
+            data: ['河南省', '天津省', '浙江省', '山东省', '陕西省', '湖南省', '山西省'],
             axisTick: {
                 show: false,
             },
@@ -355,7 +355,7 @@
             {
                 name: '',
                 type: 'bar',
-                data: [100, 120, 130, 140, 150, 160, 190, 150, 160, 190],
+                data: [100, 120, 130, 140, 150, 160, 190],
                 barWidth: 10,//柱图宽度
                 itemStyle: {
                     normal: {
@@ -635,14 +635,29 @@
 </script>
 <!--时间选择-->
 <script>
-    var a=new zTime({
-        el:"begin",      //选择器，必传
-        type:-2,
-        startYear:2010,         //开始年份  //可不传，默认为2000年
-        endYear:2050,           //结束年份  //可不传，默认为2025年
-        format:"-"              //时间格式分隔符： 默认为以“-”分隔 如：2018-08-08
+    var begin = new datePicker();
+    begin.init({
+        'trigger': '#begin',
+        'type': 'date',
+        'minDate':'2010-1-1',
+        'maxDate':'2100-12-31',
+        'onSubmit':function(){
+            var theSelectData=begin.value;
+        },
+        'onClose':function(){
+        }
     });
-    var b=new zTime({
-        el:"ender",             //选择器，必传
+    var ender = new datePicker();
+    ender.init({
+        'trigger': '#ender',
+        'type': 'date',
+        'minDate':'2010-1-1',
+        'maxDate':'2100-12-31',
+        'onSubmit':function(){
+            var theSelectData=ender.value;
+        },
+        'onClose':function(){
+        }
     });
+
 </script>
