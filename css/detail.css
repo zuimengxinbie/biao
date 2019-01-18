@@ -38,6 +38,9 @@ footer .analy a, .detail a, .home a{display: flex; flex-direction: column; align
 .d-section input{  width: 1.40rem;  font-size: 0.24rem;  color:#444444;  }
 .ztimeMask{  font-size: 0.24rem;  }
 
+#userone{font-size: 0.24rem;}
+#user-input{width: 1.24rem; margin-left: 0.35rem; color: rgba(38,48,73,1); font-size: 0.30rem; font-weight: 600;}
+
 
 /*表*/
 #echarts{margin-bottom: 1.10rem;}
@@ -53,6 +56,7 @@ footer .analy a, .detail a, .home a{display: flex; flex-direction: column; align
 .el-table--striped .el-table__body tr.el-table__row--striped td{background: rgba(221, 221, 238, 0.2) !important;}
 .el-table__row{height: 0.60rem !important;}
 .el-table td, .el-table th{padding:0.10rem 0 !important;}
+
 
 
 
