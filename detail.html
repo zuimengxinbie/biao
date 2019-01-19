@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/detail.css?v=123">
     <link rel="stylesheet" href="css/MultiPicker.css">
 
+
     <!--创建表格-->
     <link rel="stylesheet" href="css/element.css">
     <script src="js/vue.min.js"></script>
@@ -200,7 +201,9 @@
         },
         legend: {
             orient: 'vertical',
-            x: '80%',
+            itemWidth: 10,
+            itemHeight: 10,
+            x: '84%',
             y: '50%',
             data: ['男士', '女士', '未知']
         },
@@ -217,7 +220,6 @@
                         position: 'center'
                     },
                     emphasis: {
-                        show: true,
                         textStyle: {
                             fontSize: '24',
                             fontWeight: 'bold'
@@ -466,14 +468,16 @@
         grid: {
             top: '18%',
             left: '3%',
-            right: '20%',
+            right: '18%',
             bottom: '10%',
             containLabel: true
         },
         xAxis: [
             {
-                name: '    (日期)',
+                name: '(日期)',
                 nameLocation: 'end',
+                position:'bottom',
+                nameGap:30,
                 nameTextStyle: {
                     color: '#252525',
                     fontSize: 10
