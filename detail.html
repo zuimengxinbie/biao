@@ -91,7 +91,6 @@
 <div id="echarts">
     <div class="more">
         <div class="e-title">
-            <!--<span class="e-user">活跃用户</span>-->
             <input type="text" name="" id="user-input" value="活跃用户" placeholder="" readonly />
             <span class="trig"></span>
         </div>
@@ -105,7 +104,7 @@
 
     <div class="more">
         <div class="e-title">
-            <span class="e-user">省份用户</span>
+            <input type="text" name="" id="pro-input" value="省份用户" placeholder="" readonly />
             <span class="trig"></span>
         </div>
         <div id="province" style="width: 100%;height: 160px;"></div>
@@ -117,7 +116,7 @@
 
     <div class="more">
         <div class="e-title">
-            <span class="e-user">销售金额</span>
+            <input type="text" name="" id="money-input" value="销售金额" placeholder="" readonly />
             <span class="trig"></span>
         </div>
         <div id="amount" style="width: 100%; height: 160px;"></div>
@@ -129,7 +128,7 @@
 
     <div class="more">
         <div class="e-title">
-            <span class="e-user">近期开团浏览</span>
+            <input type="text" name="" id="browse-input" value="近期开团浏览" placeholder="" readonly />
             <span class="trig"></span>
         </div>
         <div id="browse" style="width: 100%; height: 220px;"></div>
@@ -137,7 +136,7 @@
 
     <div class="more">
         <div class="e-title">
-            <span class="e-user">近期开团浏览</span>
+            <input type="text" name="" id="dump-input" value="近期团长数据" placeholder="" readonly />
             <span class="trig"></span>
         </div>
         <div id="graph" v-cloak>
@@ -182,6 +181,10 @@
 </footer>
 
 <div id="userone"></div>
+<div id="usertwo"></div>
+<div id="userthree"></div>
+<div id="userfour"></div>
+<div id="userfive"></div>
 </body>
 </html>
 
@@ -681,5 +684,65 @@ new MultiPicker({
     }],
     success: function (arr) {
         $('#user-input').attr('value',JSON.stringify(arr[0].value).replace(/\"/g,""));
+    }    });
+
+new MultiPicker({
+    input: 'pro-input',//点击触发插件的input框的id
+    container: 'usertwo',//插件插入的容器id
+    jsonData: [{
+        value: '省份用户',
+    },{
+        value: '山西省',
+    }, {
+        value: '山东省',
+    },{
+        value: '湖北省',
+    },{
+        value: '陕西省',
+    },{
+        value: '江苏省',
+    }],
+    success: function (arr) {
+        $('#pro-input').attr('value',JSON.stringify(arr[0].value).replace(/\"/g,""));
+    }    });
+
+new MultiPicker({
+    input: 'money-input',//点击触发插件的input框的id
+    container: 'userthree',//插件插入的容器id
+    jsonData: [{
+        value: '销售金额',
+    }, {
+        value: '购买金额',
+    },{
+        value: '订单数量',
+    }],
+    success: function (arr) {
+        $('#money-input').attr('value',JSON.stringify(arr[0].value).replace(/\"/g,""));
+    }    });
+
+new MultiPicker({
+    input: 'browse-input',//点击触发插件的input框的id
+    container: 'userfour',//插件插入的容器id
+    jsonData: [{
+        value: '近期开团浏览',
+    }, {
+        value: '近期团购数量',
+    }],
+    success: function (arr) {
+        $('#browse-input').attr('value',JSON.stringify(arr[0].value).replace(/\"/g,""));
+    }    });
+
+new MultiPicker({
+    input: 'dump-input',//点击触发插件的input框的id
+    container: 'userfive',//插件插入的容器id
+    jsonData: [{
+        value: '近期团长数据',
+    }, {
+        value: '近期退款单数',
+    },{
+        value: '近期开团订单',
+    },],
+    success: function (arr) {
+        $('#dump-input').attr('value',JSON.stringify(arr[0].value).replace(/\"/g,""));
     }    });
 </script>

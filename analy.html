@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/analy.css">
 
+    <script src="js/datePicker.js"></script>
     <script src="js/rem.js"></script>
     <script src="js/jquery-3.3.1.min.js"></script>
 </head>
@@ -16,7 +17,22 @@
 <header>
     <img src='image/img_slgan@2x.png' class='logo'>
 </header>
-
+<div class="m-date">
+    <div class="d-time">
+        <div class="d-range">
+            日期范围
+            <span class="hot">近一天</span>
+            <span>近7天</span>
+        </div>
+    </div>
+    <div class="d-section">
+        <input type="text" readonly id="begin" placeholder="2019-01-01"/>
+        <span class="trig"></span>
+        <span class="writing">至</span>
+        <input type="text" readonly id="ender" placeholder="2019-01-02"/>
+        <span class="trig"></span>
+    </div>
+</div>
 <div id="data">
     <div class="sell">
         <ul class="s-main">
@@ -236,3 +252,31 @@
 </footer>
 </body>
 </html>
+<script>
+    //    时间选择
+    var begin = new datePicker();
+    begin.init({
+        'trigger': '#begin',
+        'type': 'date',
+        'minDate':'2010-1-1',
+        'maxDate':'2100-12-31',
+        'onSubmit':function(){
+            var theSelectData=begin.value;
+        },
+        'onClose':function(){
+        }
+    });
+    var ender = new datePicker();
+    ender.init({
+        'trigger': '#ender',
+        'type': 'date',
+        'minDate':'2010-1-1',
+        'maxDate':'2100-12-31',
+        'onSubmit':function(){
+            var theSelectData=ender.value;
+        },
+        'onClose':function(){
+        }
+    });
+
+</script>
