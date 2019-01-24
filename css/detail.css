@@ -30,7 +30,7 @@ footer .analy a, .detail a, .home a{display: flex; flex-direction: column; align
 .d-time{height: 0.66rem; width: 100%; display: flex; box-sizing: border-box; padding-left: 0.32rem; padding-right: 0.18rem; align-items: center; justify-content: space-between;}
 .d-section{height: 0.66rem; padding-left: 0.32rem;line-height: 0.66rem}
 .d-range{display: flex; align-items: center; font-size:0.26rem; font-weight:500; color:rgba(38,48,73,1);}
-.d-range span{display: block; margin-top:0.10rem; margin-left: 0.26rem; height:0.38rem; padding:0 0.18rem; border:0.02rem solid rgba(230,230,230,1); border-radius:0.19rem; line-height: 0.38rem; font-size:0.22rem; font-weight:400; color: #999999;}
+.d-range span{display: block; margin-top:0.04rem; margin-left: 0.26rem; height:0.38rem; padding:0 0.18rem; border:0.02rem solid rgba(230,230,230,1); border-radius:0.19rem; line-height: 0.38rem; font-size:0.22rem; font-weight:400; color: #999999;}
 .d-range .hot{border:0.02rem solid rgba(53, 177, 255, 1); color: rgba(53, 177, 255, 1);}
 .d-update{font-size:0.22rem; font-family:PingFang-SC-Regular; font-weight:400; color:rgba(37,37,37,1);}
 .d-section{font-size: 0.28rem; color: #999999; display: flex; align-items: center}
@@ -50,6 +50,7 @@ footer .analy a, .detail a, .home a{display: flex; flex-direction: column; align
 .even{margin-top: 0; margin-bottom: 0.30rem;}
 .e-title .e-user{margin-left: 0.35rem;}
 .trig{display: block; width: 0.18rem; height: 0.10rem; margin-left:0.10rem; background: url("../image/jiao.png") center no-repeat; background-size: 100%;}
+.trans{display: block; width: 0.20rem; height: 0.20rem; margin-left: 5.0rem; background: url("../image/zhf.png") center no-repeat; background-size: 100%;}
 .e-more{font-size:0.20rem; font-family:PingFang-SC-Regular; font-weight:400; color:rgba(153,153,153,1);}
     /*表格*/
 #graph{width: 92%; margin-left: 0.32rem; margin-top:0.20rem; margin-bottom: 0.50rem;}
