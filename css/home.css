@@ -26,7 +26,7 @@ footer .analy a, .detail a, .home a{display: flex; flex-direction: column; align
 .arrows{width: 0.13rem; height: 0.24rem; margin-left: 0.18rem; margin-right: 0.30rem; background: url("../image/icon_md_xz@2x.png") no-repeat center; background-size: 100%;}
 .exit{width:6.58rem; height:0.86rem; margin:0 auto; margin-top:2.0rem; background:rgba(255,222,0,1); box-shadow:0 0 0.16rem 0 rgba(255,222,0,0.53); border-radius:0.43rem; line-height: 0.86rem; text-align: center; font-size:0.36rem; font-weight:500; color:rgba(51,51,51,1);}
 input{text-align: right;}
-#iden{font-size: 0.28rem;}
-#seat{font-size: 0.28rem;}
+#iden{font-size: 0.32rem;}
+#seat{font-size: 0.32rem;}
 #iden-input{margin-bottom:0.08rem;}
 #palce-input{margin-bottom:0.04rem;}
