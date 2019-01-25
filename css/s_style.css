@@ -1,0 +1,7 @@
+@charset "utf-8";
+/* CSS Document */
+
+.s_top-tip{ width:100%; height:0.9rem; background:#FFD800;}
+.s_top-tip h3{ float:left; width:2.62rem; height:0.9rem;}
+.s_top-tip h3 img{ diplay:block; width:80%; height:80%; margin-top:-0.60rem;margin-left: 0.20rem}
+.s_top-tip p{float:left;  color:#333;  font-size:0.22rem;  margin-top:0.20rem;}

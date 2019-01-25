@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>购物车</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" type="text/css" href="css/common.css">
+    <link rel="stylesheet" type="text/css" href="css/d_cart.css">
+</head>
+<body class="bg_white">
+
+<div class="mainc">
+    <div class="bar-nav">
+        <button class="bar-btn left-bar-btn bar-back"></button>
+        <button class="bar-btn right-bar-btn">编辑</button>
+        <span class="bar-title">购物车</span>
+    </div>
+
+    <div class="cart-content">
+        <div class="cart-empty" style="display: none">
+            <div class="cart-moov"><img src="https://thl.lecuntao.com/youxuan/icons/shopping.png" class="empty-img">
+            </div>
+            <span class="empty-text">还没有添加商品...</span>
+            <button class="empty-btn">去购物</button>
+        </div>
+
+        <div class="cart-item">
+            <div class="goods-img-content">
+                <img src="https://thl.lecuntao.com/uploads/goods/20190124142733597.png" class="item-img">
+            </div>
+            <div class="cartItem-msg">
+                <div class="goods-name">【秒杀】生活卫生纸960g*16卷LX16960</div>
+                <div class="num">960g*16卷</div>
+                <div class="price">￥
+                    <span class="price-color">31:00</span>
+                </div>
+            </div>
+            <div class="num-content">
+                <button class="minus">-</button>
+                <span class="number"></span>
+                <button class="add">+</button>
+            </div>
+            <icon class="choice-icon checked-off" data-key=""></icon>
+        </div>
+    </div>
+    <div class="btm-msg">
+        <button class="right-btn">结算(6)</button>
+        <div class="left-msg">
+            <div class="choice-all">全选</div>
+            <div class="heji">合计:
+                <text class="heji-icon">￥</text>
+            </div>
+            <span class="price">311</span>
+        </div>
+    </div>
+</div>
+</body>
+<script type="text/javascript" src="js/zepto.min.js"></script>
+<script type="text/javascript" src="js/reset.js"></script>
+</html>

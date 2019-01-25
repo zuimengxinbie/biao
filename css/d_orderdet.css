@@ -1,0 +1,76 @@
+
+button{border:0;}
+.mainc{background: #F5F5F5}
+/*底部*/
+.bar-nav~.orderdet-content{top: 0.80rem;}
+.foot-content~.orderdet-content{bottom: 1.00rem;}
+.foot-content{position: fixed; bottom: 0; right:0;}
+.od-btn{float: right; line-height: 1.00rem; width: 3.00rem; text-align: center; font-size: 0.36rem; color: #1a1a1a; background-color: #ededed; border-radius: 0;}
+.od-btn.active{color: #333; background-color: #FFDE00;}
+/*头部*/
+.non-payment{font-size: 0.32rem; color: #e60013; height: 0.84rem; line-height: 0.84rem; padding: 0 0.30rem 0 0.88rem; overflow: hidden; background-color: #FFFDF1; background-image: url('../images/orderdet/head.png'); background-position: 0.30rem center; background-repeat: no-repeat; background-size: 0.40rem auto;}
+.non-right{float: right; font-size: 0.32rem; color: #1a1a1a;}
+.non-right .text{font-size: 0.32rem; color: #e60013; margin-left: 0.12rem;}
+/*提货地址*/
+.payer-msg{padding: 0.32rem 0.30rem; background-color: #fff; position: relative; margin-bottom: 0.20rem;}
+.payer-msg:before,
+.payer-msg:after{content: ""; position: absolute; left: 0; right: 0; height: 0.12rem;}
+.payer-msg:before{top: 0;}
+.payer-msg:after{bottom: 0;}
+.payer-tip1{overflow: hidden;}
+.payer-tip1 .text{float: left; font-size: 0.26rem; color: #1A1A1A; line-height: 0.48rem; margin-right: 0.08rem;}
+.payer-tip1 .inputText{float: left; width: 2.20rem; height: 0.48rem; border: 1px solid #ccc; border-radius: 0.08rem; margin-right: 0.14rem; background-color: transparent; font-size: 0.24rem; color: #1A1A1A; padding: 0 0.08rem;}
+.payer-tip1 .payer-text{float: left; font-size: 0.26rem; color: #1A1A1A; line-height: 0.48rem; margin-right: 0.08rem;}
+.payer-tip1 .payer-color{color: #e60013;}
+.payer-tip1 .payer-input{float: left; position: relative; width: 4.84rem;}
+.payer-tip1 .inputText2{display: block; width: 3.28rem; height: 0.48rem; border: 1px solid #ccc; border-radius: 0.08rem; margin-right: 0.14rem; background-color: transparent; font-size: 0.24rem; color: #1A1A1A; padding: 0 0.08rem; margin-bottom: 0.08rem;}
+.payer-tip1 .payer-btn{position: absolute; right: 0; top: 0; width: 1.48rem; height: 0.48rem; line-height: 0.44rem; border: 1px solid #ccc; border-radius: 0.08rem; text-align: center; font-size: 0.24rem; color: #4D4D4D;}
+.payer-tip2{font-size: 0.24rem; color: #808080; word-break: break-all; line-height: 0.36rem; margin: 0.08rem 0;}
+.payer-tip3{font-size: 0.24rem; color: #e60013; word-break: break-all; line-height: 0.36rem;}
+.payer-msg::before,
+.payer-msg::after,
+.contacts-modal .icon{background: url('../images/orderdet/tiao.png') left top; background-position: left top; background-size: auto 0.12rem;}
+.payer-tip1 .inputText{width: auto; line-height: 0.50rem; border: none;}
+/*订单详情*/
+.orderDet-list{width: 100%; margin-bottom: 0.04rem;}
+.goodsMsg-title{font-size: 0.28rem; color: #1a1a1a; line-height: 0.44rem; padding: 0.12rem 0.30rem; overflow: hidden; background-color: #fff; border-bottom: 0.01rem solid #e6e6e6;}
+.tohome{width: 1.44rem; height: 0.44rem; background: #fff; line-height: 0.40rem; float: right; font-size: 0.22rem; color: #e60013; text-align: center; border: 0.01rem solid #e60013; border-radius: 4.00rem;}
+.look-qr{float: right; font-size: 0.32rem; color: #e60013; line-height: 0.44rem;}
+.look-qr .icon{display: inline-block; margin-right: 0.10rem; width: 0.50rem; height: 0.50rem; vertical-align: middle; margin-top: -0.04rem;}
+.tohome .icon{display: inline-block; vertical-align: middle; margin-top: -0.06rem; width: 0.28rem; height: 0.24rem; margin-right: 0.04rem; background: url('../images/orderdet/car.png') center center no-repeat; background-size: contain;}
+.look-qr .icon{display:inline-block; margin-right:0.10rem; width:0.50rem; height:0.50rem; vertical-align:middle; margin-top:-0.04rem; background:url("../images/code.png") no-repeat center ; background-size: 0.32rem auto;}
+/*商品列表*/
+.goods-list{background-color: #fff;}
+.goods-item{padding: 0.20rem 0.30rem; overflow: hidden; border-bottom: 1px solid #e6e6e6;}
+.goods-item:last-child{border-bottom: none;}
+.goodsImg-content{float: left; width: 1.80rem; height: 1.80rem; position: relative;}
+.goodsImg-content .goods-img{display: block; width: 100%; height: 100%; -webkit-user-select: none;}
+.goods-msg{margin-left: 1.96rem; height: 1.80rem; position: relative;}
+.name{font-size: 0.24rem; color: #1A1A1A; line-height: 0.34rem; display: -webkit-box; -webkit-box-orient: vertical; overflow: hidden; text-overflow: ellipsis; -webkit-line-clamp: 2;}
+.num{font-size: 0.24rem; color: #808080; line-height: 0.40rem;}
+.time{font-size: 0.24rem; color: #e60013; position: absolute; left: 0; bottom: 0.40rem;}
+.price{font-size: 0.24rem; color: #e60013; position: absolute; bottom: 0; left: 0; right: 0; overflow: hidden;}
+.price .money{font-size: 0.32rem;}
+.price .s-money{font-size: 0.20rem; color: #999; margin-left: 0.12rem; position: relative; padding-right: 0.06rem;}
+.price .s-money::after{content: ""; position: absolute; top: 50%; left: 0; right: 0; height: 1px; background-color: #808080;}
+.price .goods-num{float: right; font-size: 0.32rem; color: #1a1a1a;}
+.number-content{border-top: 1px solid #E6E6E6; background-color: #fff; padding: 0.30rem; overflow: hidden; line-height: 0.80rem;}
+.num-tip{float: left; font-size: 0.30rem; color: #1A1A1A; line-height: 0.80rem;}
+.num-content{float: right;}
+.num-content .minus,
+.num-content .add{float: left; height: 0.80rem; width: 0.76rem; text-align: center; line-height: 0.75rem; border: 0.01rem solid #e6e6e6; background-color: transparent; padding: 0; margin: 0; border-radius: 0; font-size: 0.50rem; color: #e60013; box-sizing: border-box;}
+.num-content .number{float: left; height: 0.80rem; line-height: 0.76rem; width: 0.96rem; font-size: 0.36rem; color: #1A1A1A; text-align: center; border: none; border-top: 0.01rem solid #e6e6e6; border-bottom: 0.01rem solid #e6e6e6;}
+.num-content .minus{border-bottom-left-radius: 0.08rem; border-top-left-radius: 0.08rem;}
+.num-content .add{border-bottom-right-radius: 0.08rem; border-top-right-radius: 0.08rem;}
+
+
+.payment-msg{background-color: #fff; padding: 0.20rem 0.30rem; overflow: hidden; margin-top: 0.20rem;}
+.payment-tip1{text-align: right; font-size: 0.24rem; color: #808080;}
+.payment-tip1 .tip1-text{display: inline-block; margin-left: 0.12rem;}
+.payment-tip1 .text{font-size: 0.28rem;}
+.payment-coupon{font-size: 0.24rem; color: #808080; text-align: right; margin-top: 0.12rem;}
+.payment-tip2{font-size: 0.24rem; color: #1A1A1A; margin-top: 0.10rem; text-align: right;}
+.payment-tip2 .tip2-text{display: inline-block; font-size: 0.28rem; color: #e60013; margin-left: 0.08rem;}
+.payment-tip2 .text{font-size: 0.36rem;}
+.order-text{background-color: #fff; padding: 0.20rem 0.30rem; margin: 0.20rem 0;}
+.order-text .text{font-size: 0.24rem; color: #999; line-height: 0.36rem;}

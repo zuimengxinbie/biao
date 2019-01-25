@@ -1,0 +1,38 @@
+/*公共头部*/
+input, button{box-sizing: border-box; border:none;} .mainc{overflow: hidden;}
+button{padding: 0; margin: 0; background-color: transparent;}
+button::after{content: none;}
+.bar-back{background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAiCAYAAABfqvm9AAAB2UlEQVRIiaXWTYhNUQDA8d9osplIUhQRGwsl9SZNGcnXSkdpYhYoH6XJRyZZKJOhxEK+v5ooktWQzc3KR/kYEmVhYbYiNRaz0WxsWJx763jNzHvv3rP73877vdt799xz2mq1mopjDp5iGXrbK2Lz8AIr895VBVyIESzJ+xcuzSiJrcCnBPuJ1SGE0TLgKnzAgry/oiuE8A1aBdfgFTryHkV3COF7MaEVcBPeYnbeb9AZQhhPJzULbsezpF9iHSbqJzYD7sRw0k+wEX8nm9wIPIyHST9Cz3QfmA48iutJD2FHgxuYEjyPK0lfRl8jbCrwAk4kPYhjzWBQv/SGcCDpkzjXLFYP3sOepA/hVitYAc4UH4UtyfV9+Re0PNoxkGAT2Iz3ZTAm/1PaymIFeBZZ3h3iO25/FfAPtuJ+cv0uDpYFi7EXd5K+iVNVQOIzeDHpMzhdBYTj/n+YB3GtCkhcIf1JH8HtKiBczaFi9OFxFRBuYHfSPeKqKg0SX7C9SW8Tt4BJF0Cze8qwuCSLsV7c/WaVBeE5uvE777X4mGXZ3LIgcVmmu91yvMuyrDhBtAzCZ3RhrA5dDG0VjnOL8BpL8x7DhrKHJfiBTnzJez76q4AwLv6mI+IJ7ME/AbVZut3C/SwAAAAASUVORK5CYII='); background-position: center center; background-repeat: no-repeat; background-size: 0.20rem auto;}
+.bar-nav{position: fixed; z-index: 10; right: 0; left: 0; height: 0.80rem; border-bottom: 0; background-color: #f7f7f7; -webkit-backface-visibility: hidden; backface-visibility: hidden;}
+.bar-nav::after{content: ""; display: table; clear: both;}
+.bar-nav .bar-btn{display: inline-block; height: 0.80rem; min-width: 0.80rem; border: 0; line-height: 0.48rem; text-align: center; font-size: 0.32rem; color: #333; padding: 0.16rem; margin: 0; box-sizing: border-box; position: relative; z-index: 6;} .bar-nav .left-bar-btn{float: left;} .bar-nav .right-bar-btn{float: right; margin-right: 0.20rem;}
+.bar-nav .bar-title{display: block; font-size: 0.32rem; color: #333; line-height: 0.80rem; text-align: center; margin: 0 1.20rem; box-sizing: border-box;}
+/*内容*/
+.ticheng-content{position: absolute; top: 3.40rem; left: 0; bottom: 0; width: 100%; overflow-x: hidden; overflow-y: auto; background-color: #F5F5F5;}
+.ticheng-tip1{position: absolute; top: 0.80rem; left: 0; right: 0; height: 2.60rem; z-index: 10; border-bottom: 0.20rem solid #F5F5F5;}
+.type-content{height: 1.16rem; padding: 0 0.26rem; border-bottom: 1px solid #E6E6E6; display: -webkit-flex; -webkit-align-items: center;}
+.type-content .type-item{-webkit-flex: 1; font-size: 0.32rem; color: #FFDE00; line-height: 0.74rem; text-align: center; border-top: 0.01rem solid #FFDE00; border-bottom: 0.01rem solid #FFDE00; border-right: 0.01rem solid #FFDE00;}
+.type-content .type-item:first-child{border-left: 1px solid #FFDE00; border-top-left-radius: 0.12rem; border-bottom-left-radius: 0.12rem;}
+.type-content .type-item:last-child{border-top-right-radius: 0.12rem; border-bottom-right-radius: 0.12rem;}
+.type-content .type-item.active{color: #333; background-color: #FFDE00;}
+.type-content .seach-content{display: -webkit-flex; width: 100%; padding: 0.14rem 0.24rem; border-radius: 0.12rem; background-color: #eee; overflow: hidden; position: relative;}
+.type-content .seach-content .input-span{flex-grow: 1; border: 1px solid #E6E6E6; border-radius: 0.06rem; background-color: #fff; padding: 0 0.22rem; font-size: 0.24rem; color: #1A1A1A; line-height: 0.48rem; max-width: 2.83rem;}
+.type-content .seach-content .input-span[data-time=""]{color: #999;}
+.type-content .seach-content .em{font-size: 0.24rem; color: #1A1A1A; line-height: 0.48rem; width: 0.80rem; text-align: center;}
+.sum-money{line-height: 1.24rem; text-align: center;}
+.sum-money .span{font-size: 0.80rem; color: #e60013;}
+.sum-money .em{font-size: 0.40rem;}
+.title{font-size: 0.30rem; color: #1A1A1A; text-align: center; line-height: 0.72rem; background-color: #fff;}
+.tc-item{background-color: #fff; padding: 0.22rem 0.10rem; border-top: 0.01rem solid #E6E6E6; border-bottom: 0.01rem solid #E6E6E6; margin-bottom: 0.20rem; display: -webkit-flex; -webkit-flex-wrap: nowrap;}
+.tc-item .item-tip1,
+.tc-item .item-tip2,
+.tc-item .item-tip3{text-align: center; border-right: 1px solid #E6E6E6;}
+.tc-item .span{display: block; font-size: 0.24rem; color: #333; line-height: 0.36rem;}
+.tc-item .span:first-child{color: #999;}
+.tc-item .em{display: block; font-size: 0.32rem; color: #1A1A1A; line-height: 0.36rem;}
+.tc-item .item-tip1{width: 2.84rem; padding: 0 0.22rem 0 0.30rem;}
+.tc-item .item-tip1 .span{text-align: left;}
+.tc-item .item-tip1 .span ~ .span{margin-top: 0.04rem; line-height: 0.32rem;}
+.tc-item .item-tip2{width: 1.40rem;}
+.tc-item .item-tip3{width: 1.68rem; border-right: none;}
+.btm-nomore{display: block; width: 100%; height: 0.60rem; line-height: 0.60rem; font-size: 0.24rem; color: #999; text-align: center;}

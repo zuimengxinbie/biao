@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>地址</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" type="text/css" href="css/common.css">
+    <link rel="stylesheet" type="text/css" href="css/d_address.css">
+</head>
+<body>
+<div class="mainc">
+    <!--pages/site/site.wxml-->
+    <!-- 当前 -->
+    <div class='site'>
+        <div class='s-present'>当前自提点</div>
+        <div class='s-pre'>默认</div>
+        <div class='present'>
+            <div class='p-name'>自提点：清徐县凤仪店</div>
+            <div class='p-distance'>清徐县凤仪店交叉路口500米处</div>
+        </div>
+    </div>
+    <div class='s-line'></div>
+
+    <!-- 附近 -->
+    <div class='store'>
+        <div class='store-shop'>
+            <div class='store-msg'>
+                <div class='store-name'>1号店康东巷店</div>
+                <div class='store-dis'>清徐康东巷店6号</div>
+            </div>
+            <div class='store-distance'>0km</div>
+        </div>
+
+        <div class='store-shop active'>
+            <div class='store-msg'>
+                <div class='store-name'>3号店凤仪店</div>
+                <div class='store-dis'>清徐县凤仪街紫林路交叉口南300米路西</div>
+            </div>
+            <div class='store-distance'>360km</div>
+        </div>
+
+        <div class='store-shop'>
+            <div class='store-msg'>
+                <div class='store-name'>4号店凤仪店</div>
+                <div class='store-dis'>清徐县凤仪街紫林路交叉口南300米路西</div>
+            </div>
+            <div class='store-distance'>780km</div>
+        </div>
+    </div>
+
+    <div class="stm-nomore">没有更多记录了···</div>
+
+    <!--弹出框-->
+    <div class="s-mat">
+        <div class="s-modal">
+            <p class="s-cut">切换门店</p>
+            <p class="s-prmit">确认切换该门店</p>
+            <div class="s-info">
+                <span class="s-cancel">取消</span>
+                <span class="s-affirm">确认</span>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script type="text/javascript" src="js/zepto.min.js"></script>
+<script type="text/javascript" src="js/reset.js"></script>
+</html>

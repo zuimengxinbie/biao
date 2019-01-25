@@ -1,44 +1,28 @@
 @charset "utf-8";
-	
 /* CSS Document */
-/*公共部分*/
-body {
-	background: #fff;
-	 -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-	 -webkit-touch-callout:none;
-	 }
-html{-webkit-tap-hightlight-color:rgba(255,255,255,0);
-	-webkit-text-size-adjust:none;
-	font-size:20px;
-	-line-height:1.5;
-	font-family:'微软雅黑';
-	}
-ol,ul {list-style:none;
-	} 
-body,p,blockquote,ul,ol,li,h1,h2,h3,h4,h5,h6,dl,dd,input,textarea,button{margin:0;
-	 padding:0;
-	}
-h1, h2, h3, h4, h5,em,i { font-weight:normal}
-em,i{ font-style: normal;
-	 }
-img{border: 0;
-	
-	vertical-align: middle}
-a {text-decoration: none;
-	 color: #252525;
-	 outline:none}
-input,select,textarea{-font-size:100%;
-	border:0;
-	outline: none;
-	 -webkit-appearance:none;
-	 resize:none;
-	}
-html,body{ -height:100%;
-	 width:100%;
-	overflow-x:hidden;
-	}
-[v-cloak]{
-	display: none;
-}
-
-
+/*base*/
+a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, body, canvas, caption, center, cite, code, dd, del, details, dfn, div, dl, dt, em, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, i, iframe, img, ins, kbd, label, legend, li, mark, menu, nav, object, ol, output, p, pre, q, ruby, s, samp, section, small, span, strike, strong, sub, summary, sup, table, tbody, td, tfoot, th, thead, time, tr, tt, u, ul, var, video{margin: 0;padding: 0;border: 0;font: inherit;vertical-align: baseline;word-wrap: break-word}
+table{border-collapse: collapse;border-spacing: 0}
+button, input, select, textarea{outline: 0;-webkit-box-sizing: border-box}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section{display: block}
+li, ol, ul{list-style: none}
+blockquote, q{quotes: none}
+blockquote:after, blockquote:before, q:after, q:before{content: '';content: none}
+b, strong{font-weight: 700}
+img{max-width: 100%;vertical-align: middle;border: 0;-ms-interpolation-mode: bicubic;-webkit-touch-callout: none}
+*, :after, :before{box-sizing: border-box; outline: 0;}
+:focus{outline: 0}
+a{color: #333;text-decoration: none}
+a.active{color: #06c}
+body{font-family:"微软雅黑";}
+.ipt_nbd{border: none;}
+.bg_gray{background-color: #eeeeee;}
+.bg_blue{background-color: #4c71d6;}
+.bg_white{background-color: #ffffff}
+.bg_black{background-color: #000000;}
+.bg_orange{background-color: #fd9301;}
+.bg_yellow{background-color: #eea600;}
+.bg_red{background-color: #f81234;}
+.fcgray{color: #999999 !important;}
+.bod_b{border-bottom: 1px solid #eeeeee;}
+/*===============BASE======================*/
